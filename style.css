@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin Sans");
+:root{
+    --primary:#FFD280;
+    --background:#0E0C0C;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+
+
+ }
+body{
+    box-sizing: border-box;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color:var(--background);
+    font-family: "Josefin Sans";
+    color: white;
+ 
+  
+}
+.hamburger{
+    display: none;
+}
+
+.nav{
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+  
+    justify-content: space-between;
+    padding: 15px 15px 15px 15px;
+}
+.nav-items{
+    display: flex;
+    padding: 0px 15px 0px 15px;
+
+}
+.nav-items li{
+    list-style: none;
+}
+.nav-items li a{
+    padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    color: var(--background);
+    font-family: 'Josefin Sans';
+font-style: normal;
+font-weight:600;
+font-size: 1.5rem;
+font-variant-caps: all-petite-caps;
+transition: 200ms;
+}
+.nav-items li a:hover{
+    color: #2f2f2f;
+
+}
+
+.landing{
+height: 85vh;
+display: flex;
+align-items: center;
+
+padding: 20px;
+
+}
+.landing .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 10px;
+}
+.landing h2{
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.landing .info .p2{
+    margin: 15px;
+}
+.landing .info p{
+    font-size: 25px;
+}
+.landing .illustrations{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow-x: auto;
+}
+.clipRRect{
+    border-radius: 10px;
+}
+.landing .illustrations .img1{
+
+    width: 20vw;
+    height: 60vh;
+
+    background-color: var(--primary);
+    margin: 10px;
+    object-fit: scale-down; 
+    
+}
+.landing .illustrations .img2{
+    width: 10vw;
+    height: 60vh;
+    object-fit: cover;
+    background: #9BA0FC;
+    margin: 10px;
+}
+.landing .illustrations .img3{
+    width: 10vw;
+    height: 60vh;
+    object-fit: cover;
+    background: #8FC7FF;
+    margin: 10px;
+}
+.scale{
+    transition: 200ms ease-in-out;
+}
+.nav-items .nav-btn{
+    border: #0E0C0C solid;
+    margin: 0px 10px;
+    transition: 200ms ease-out;
+    
+}
+
+.nav-items .nav-btn:hover{
+    transform: scale(0.9);
+    background: var(--primary) radial-gradient(circle, transparent 1%, var(--primary) 1%) center/15000%;
+}
+.nav-items .nav-btn:active{
+    background-color:var(--primary);
+    transform: scale(1);
+}
+
+.line-btn{
+    height: 10px;
+    width: 50px;
+    background-color: var(--background);
+}
+
+
+
+.landing .info .btn{
+    padding: 10px 20px;
+    background-color: var(--primary);
+    border: var(--background)1px solid;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 200ms;
+}
+.landing .info .btn:hover{
+    background-color: transparent;
+    border: #FFD280 1px solid;
+    color: var(--primary);
+    transform: scale(0.9);
+}
+.landing .info .btn:active{
+    background-color: #242018 ;
+    transform: scale(1);
+}
+.landing .info .img{
+    display: none;
+}
+.row{
+  
+    display: flex;
+justify-content: space-evenly;
+
+
+}
+.hamburger .line{
+    display: block;
+    height: 4px;
+    width: 40px;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: var(--background);
+    transition: 200ms ease-in-out;
+}
+
+.line2{
+
+    transform: translateX(1000%);
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+    }
+
+    .line1{
+        transform: rotate(320deg) translate(-9px, 4px);
+    }
+    .line3{
+        transform: rotate(42deg) translate(-8px, -2px)
+    }
+   
+    .landing .illustrations{
+        width: 0px;
+        height: 0px;
+    }
+    .landing .info .img{
+        display: block;
+        overflow: auto;
+        height: 20vh;
+        width: 25vw;
+
+        margin: 10px;
+        border-radius: 10px;
+        object-fit: contain;
+        background-color: var(--primary);
+    }
+   .nav-items{
+    padding: 0;
+    margin: 0;
+    position:absolute;
+    left: 0;
+    height: 100vh;
+    top: 0;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+   transform: translateX(-120%);
+   transition: transform .2s ease-in;
+    }
+    .nav_active{
+        transform: translateX(0%);
+
+    }
+    
+  }
+
+
+  @keyframes navfade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }to{
+        opacity: 1;
+    }
+}

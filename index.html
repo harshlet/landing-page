@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  
+</head>
+<body>
+    <header class="nav">
+        <h1 class="logo">Logo</h1>
+        <div class="hamburger" id = "hb">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id = "line3"></div>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-btn"><a href="">home</a></li>
+            <li class="nav-btn"><a href="">About Us</a></li>
+            <li class="nav-btn"><a href="">Contact Us</a></li>
+        </ul>
+    </header>
+    <div class="landing">
+        <div class="info">
+            <div class="row">
+                <img class="img" src="images/Saly-14.png" alt="">
+                <img class="img" src="images/Saly-15.png" alt="">
+                <img class="img" src="images/Saly-16.png" alt="">
+            </div>
+            <h2 class="p2">
+                ILLUSTRATIONS
+            </h2>
+            <p class="p2">Bring any design to life with stunning 3D illustrations. Grab your 3d illustrations now.</p>
+            <button class="btn p2">EXPLORE</button>
+        </div>
+        <div class ="illustrations">
+            <img class="img1 clipRRect scale" src="images/Saly-14.png" alt="">
+            <img class="img2 clipRRect scale" src="images/Saly-15.png" alt="">
+            <img class="img3 clipRRect scale" src="images/Saly-16.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        let nav = document.querySelector(".nav .nav-items");
+        var hb = document.getElementById("hb");
+        let line1 = document.getElementById("line1");
+        let line2 = document.getElementById("line2");
+        let line3 = document.getElementById("line3");
+        hb.addEventListener("click",()=>{
+                
+                nav.classList.toggle("nav_active")
+                line1.classList.toggle("line1")
+                line2.classList.toggle("line2")
+                line3.classList.toggle("line3")
+        });
+
+    </script>
+</body>
+</html>
